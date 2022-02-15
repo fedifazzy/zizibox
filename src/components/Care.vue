@@ -20,8 +20,7 @@
       </div>
 
       <div class="paragraph">
-        Если деревянные детали стали шершавыми, отполируйте их самой мелкой наждачной бумагой (нулёвкой) или грубой
-        безворсовой тканью (например, бязь или лён) до гладкости.
+        Если деревянные детали стали шершавыми, зашлифуйте их полировочной пилочкой, самой мелкой наждачной бумагой (нулёвкой) или грубой безворсовой тканью (например, бязь или лён) до гладкости.
       </div>
 
       <div class="paragraph">
@@ -86,7 +85,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
     h1 {
-      margin: 20px 10px 30px;
+      margin: 30px 20px 30px;
     }
 
     .wrapper {
@@ -128,7 +127,7 @@ export default defineComponent({
 
     @media only screen and (min-width: 600px) {
       .wrapper {
-        margin: 0 auto;
+        margin: 50px auto 0;
         align-items: center;
       }
 
