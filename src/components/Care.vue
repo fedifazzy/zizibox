@@ -1,85 +1,4 @@
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="logo.jpeg">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa" rel="stylesheet">
-  <title>Document</title>
-</head>
-
-<body>
-  <style>
-    body {
-      font-family: 'Comfortaa', cursive;
-      background: #fbfdf2;
-      color: rebeccapurple;
-    }
-
-    h1 {
-      margin: 20px 10px 30px;
-    }
-
-    .wrapper {
-      margin: 10px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-
-    .column {
-      width: 100%;
-      /* margin: 0 10px; */
-    }
-
-    .paragraph {
-      margin: auto 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid #DCD9FC;
-    }
-
-    .paragraph:first-child {
-      border-top: 1px solid #DCD9FC;
-    }
-
-    .social-link-paragraph {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      color: rebeccapurple;
-    }
-
-    .social-link-icon {
-      width: 32px;
-      margin-right: 10px;
-      fill: rebeccapurple;
-    }
-
-
-    @media only screen and (min-width: 600px) {
-      .wrapper {
-        margin: 0 auto;
-        align-items: center;
-      }
-
-      .column {
-        width: 50%;
-      }
-      .social-link-paragraph {
-        justify-content: space-evenly;
-      }
-
-    }
-  </style>
-
-
+<template>
   <div class="wrapper">
     <h1>
       Как ухаживать за изделиями?
@@ -100,8 +19,6 @@
         детские салфетки. Не сушите изделия вблизи отопительных приборов, не замачивайте и не кипятите.
       </div>
 
-
-
       <div class="paragraph">
         Если деревянные детали стали шершавыми, отполируйте их самой мелкой наждачной бумагой (нулёвкой) или грубой
         безворсовой тканью (например, бязь или лён) до гладкости.
@@ -109,12 +26,10 @@
 
       <div class="paragraph">
         Раз в месяц рекомендуем смазывать деревянные детали пищевым маслом, которое подходит вашему малышу (например,
-        льняным или персиковым). Затем нужно промокнуть дерево сухой салфеткой, чтобы убрать излишки масла. Такие
+        льняным или персиковым). Затем нужно промакнуть дерево сухой салфеткой, чтобы убрать излишки масла. Такие
         процедуры вернут изделию блеск и создадут защитное покрытие, благодаря которому деревянные составляющие
         прослужат дольше.
       </div>
-
-
 
       <div class="paragraph">
         Клипса держателя для пустышки или грызунка не предназначена для прорезывания зубов. Она должна быть закреплена
@@ -122,12 +37,9 @@
         снять клипсу, расстегните её (не пытайтесь сорвать резким движением).
       </div>
 
-
-
       <div class="paragraph">
         Мы рекомендуем использовать изделия только под присмотром взрослых.
       </div>
-
 
       <div class="paragraph">
         Отмечайте нас в Instagram с хештегом #zizi_box
@@ -159,7 +71,73 @@
     </div>
 
   </div>
+</template>
 
-</body>
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-</html>
+export default defineComponent({
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+})
+</script>
+
+<style scoped lang="scss">
+    h1 {
+      margin: 20px 10px 30px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .column {
+      width: 100%;
+    }
+
+    .paragraph {
+      margin: auto 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #DCD9FC;
+    }
+
+    .paragraph:first-child {
+      border-top: 1px solid #DCD9FC;
+    }
+
+    .social-link-paragraph {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      color: rebeccapurple;
+    }
+
+    .social-link-icon {
+      width: 32px;
+      margin-right: 10px;
+      fill: rebeccapurple;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .wrapper {
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      .column {
+        width: 50%;
+      }
+      .social-link-paragraph {
+        justify-content: space-evenly;
+      }
+
+    }
+</style>
