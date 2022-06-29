@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <h1>
-      Как ухаживать за изделиями?
-    </h1>
+    Как ухаживать за изделиями?
+  </h1>
     <div class="column">
       <div class="paragraph">
         Наша продукция сделана из дерева и пищевого силикона. Мы собираем аксессуары для малышей вручную из буковых и
@@ -22,7 +22,9 @@
       <div class="paragraph">
         Если деревянные детали стали шершавыми, зашлифуйте их полировочной пилочкой, самой мелкой наждачной бумагой (нулёвкой) или грубой безворсовой тканью (например, бязь или лён) до гладкости.
       </div>
-
+    </div>
+    <div class="column">
+      <div class="page-breaker"></div>
       <div class="paragraph">
         Раз в месяц рекомендуем смазывать деревянные детали пищевым маслом, которое подходит вашему малышу (например,
         льняным или персиковым). Затем нужно промакнуть дерево сухой салфеткой, чтобы убрать излишки масла. Такие
@@ -41,7 +43,9 @@
       </div>
 
       <div class="paragraph">
-        Отмечайте нас в Instagram с хештегом #zizi_box
+        Присылайте фотографии ваших малышей с аксессуарами zizi.box и оставляйте отзывы - так вы поможете нам стать ещё лучше :)
+        <br/><br/>
+        Отмечайте нас в Instagram и VK с хештегом #zizi_box
       </div>
 
       <div class="paragraph social-link-paragraph">
@@ -52,6 +56,9 @@
               d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
           </svg>
           zi.zi_box
+        </a>
+        <a href="https://vk.com/zizi_box" target="_blank">
+          <img class="vk-qr" src="/vk_qr.jpeg" />
         </a>
         <a href="https://t.me/dorofeykin" target="_blank" class="social-link">
           <svg class="social-link-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -92,20 +99,22 @@ export default defineComponent({
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      align-items: flex-start;
     }
 
     .column {
       width: 100%;
+      border-top: 1px solid #DCD9FC;
+      &:last-child {
+        // border-bottom: 1px solid #DCD9FC;
+      }
     }
 
     .paragraph {
-      margin: auto 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid #DCD9FC;
-    }
-
-    .paragraph:first-child {
-      border-top: 1px solid #DCD9FC;
+      padding: 20px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #DCD9FC;
+      }
     }
 
     .social-link-paragraph {
@@ -130,13 +139,35 @@ export default defineComponent({
         margin: 50px auto 0;
         align-items: center;
       }
+      .paragraph {
+        padding: 20px 0;
+      }
 
       .column {
-        width: 50%;
+        width: 900px;
       }
       .social-link-paragraph {
         justify-content: space-evenly;
       }
+    }
+    .vk-qr {
+      border-radius: 20px;
+      width: 90px;
+      height: 90px;
+    }
 
+    @media print {
+      .paragraph {
+        padding: 20px 0;
+        // page-break-inside: avoid;
+        // page-break-before: always;
+      }
+      .page-breaker {
+        margin: 80px 20px 0;
+      }
+      .vk-qr {
+        position: absolute;
+        margin-left: -40px;
+      }
     }
 </style>
