@@ -105,9 +105,6 @@ export default defineComponent({
     .column {
       width: 100%;
       border-top: 1px solid #DCD9FC;
-      &:last-child {
-        // border-bottom: 1px solid #DCD9FC;
-      }
     }
 
     .paragraph {
@@ -159,8 +156,6 @@ export default defineComponent({
     @media print {
       .paragraph {
         padding: 20px 0;
-        // page-break-inside: avoid;
-        // page-break-before: always;
       }
       .page-breaker {
         margin: 80px 20px 0;
